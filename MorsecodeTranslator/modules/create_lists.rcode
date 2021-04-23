@@ -1,6 +1,8 @@
 list(str) "morse_values"
 list(str) "letters"
-num ZERO >>0
+num TEN >>10
+num THIRTHY >>30
+num TWENTY >>20
 
 str letters_str >>"abcdefghijklmnopqrstuvwxyz1234567890.?, "
 list(str).ToCharArray:letters_str; to:letters;
