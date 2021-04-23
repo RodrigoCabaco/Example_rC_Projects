@@ -22,9 +22,15 @@ function main();{
        Write " -> "
        getStrListValue(morse_values[x])
        WriteStr {morse_values[x]}
-       Write ";"
+       Write " / "
        modules.brk()
     }for_letters;
+    newln
+    Write "Loaded "
+    WriteNum {morse_values.length}
+    Write " letter->morse combinations in "
+    exectime(secs)
+    Write " Seconds"
     newln
     input()
 }main;

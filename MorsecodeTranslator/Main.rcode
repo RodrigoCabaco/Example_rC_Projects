@@ -26,6 +26,12 @@ function main();{
        modules.brk()
     }for_letters;
     newln
+    Write "Loaded "
+    WriteNum {morse_values.length}
+    Write " letter->morse combinations in "
+    exectime(secs)
+    Write " Seconds"
+    newln
     input()
 }main;
 main()
