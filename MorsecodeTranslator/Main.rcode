@@ -22,7 +22,7 @@ function main();{
        Write " -> "
        getStrListValue(morse_values[x])
        WriteStr {morse_values[x]}
-       Write ";"
+       Write " / "
        modules.brk()
     }for_letters;
     newln

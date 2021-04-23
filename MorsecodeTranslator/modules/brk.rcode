@@ -2,10 +2,10 @@ if statement:num(x==TEN); name:ifTEN; ident:"    ";
     newln;
 }ifTEN;
 
-if statement:num(x==TWENTY); name:ifTWENTY; ident:"    ";
-    newln;
+if statement:num(x==TWENTY); name:ifTWENTY; ident:"   ";
+   newln;
 }ifTWENTY;
 
-if statement:num(x==THIRTHY); name:ifTHIRTHY; ident:"    ";
-    newln;
+if statement:num(x==THIRTHY); name:ifTHIRTHY; ident:"  ";
+  newln;
 }ifTHIRTHY;
