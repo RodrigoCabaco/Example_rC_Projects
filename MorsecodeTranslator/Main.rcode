@@ -1,0 +1,32 @@
+#!/usr/bin/rC
+import modules
+
+function input();{
+    color.green
+    newln
+    Write "Enter a string to convert: "
+    color.reset
+    str toConvert >>$readline
+    modules.convert(toConvert)
+    newln
+}input;
+
+function main();{
+    clear
+    modules.create_lists()
+    Write "Loaded the following letters -> morse code: "
+    newln
+    for x in range:letters.length; name:for_letters; ident:"   ";
+       getStrListValue(letters[x])
+       WriteStr {letters[x]}
+       Write " -> "
+       getStrListValue(morse_values[x])
+       WriteStr {morse_values[x]}
+       Write ";"
+    }for_letters;
+    newln
+    input()
+}main;
+main()
+newln
+exit()

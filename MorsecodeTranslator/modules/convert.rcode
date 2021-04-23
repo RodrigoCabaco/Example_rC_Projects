@@ -1,0 +1,20 @@
+function convert(str toConvert);{
+    list(str) "characters"
+    list(str).ToCharArray:toConvert; to:characters;
+    list(str) "final"
+    newln
+    Write "Final Morse Code: "
+    WriteStr {toConvert}
+    Write " -> "
+    for f in range:characters.length; name:forCharacters; ident:"   ";
+       getStrListValue(characters[f])
+       num index_letter >>0
+       letters.IndexOf:characters[f]; to:index_letter;
+       getStrListValue(letters[index_letter])
+       getStrListValue(morse_values[index_letter])
+       WriteStr {morse_values[index_letter]}       
+    }forCharacters;
+}convert;
+
+convert(toConvert)
+newln
