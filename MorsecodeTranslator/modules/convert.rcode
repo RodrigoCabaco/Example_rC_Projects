@@ -1,4 +1,7 @@
+import modules
+
 function convert(str toConvert);{
+    modules.lower(toConvert)
     list(str) "characters"
     list(str).ToCharArray:toConvert; to:characters;
     list(str) "final"
@@ -12,8 +15,10 @@ function convert(str toConvert);{
        letters.IndexOf:characters[f]; to:index_letter;
        getStrListValue(letters[index_letter])
        getStrListValue(morse_values[index_letter])
-       WriteStr {morse_values[index_letter]}       
+       WriteStr {morse_values[index_letter]} 
+       Write " "      
     }forCharacters;
+    newln
 }convert;
 
 convert(toConvert)

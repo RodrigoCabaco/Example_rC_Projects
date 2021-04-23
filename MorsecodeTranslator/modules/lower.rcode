@@ -1,0 +1,5 @@
+function lower(str toConvert);{
+    toLower (toConvert>>toConvert)
+}lower;
+
+lower()
