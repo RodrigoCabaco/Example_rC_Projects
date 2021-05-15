@@ -6,6 +6,7 @@ function clear(); => {
     clear
 };
 
+
 function draw_pixel(num x,y); => {
     pixel.drawchar x:x; y:y; color:white; char:#;
     suppress_errors()
@@ -13,25 +14,5 @@ function draw_pixel(num x,y); => {
 
 function random(num min, num max);{
     num randomized >>rand:$min$,$max$
-};
-
-@Namespace list
-#Args -> str list_name, str value_to_check
-#Returns -> str in_list (True/False)
-
-function list_contains(str list_name,value_to_check);{
-    suppress_errors()
-    str in_list >>"False"
-    num len >>$list_name$.length
-    for x in range:len;{
-        suppress_errors()
-        getStrListValue($list_name$[x])
-        WriteStr {$line_name$[x]}
-        if str($list_name$[x]==value_to_check);{
-            str in_list >>"True"
-            stop;
-        };
-    };
-    stop;
-    suppress_errors()
+    return randomized;
 };
