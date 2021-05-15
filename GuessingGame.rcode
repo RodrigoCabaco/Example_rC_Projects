@@ -1,0 +1,26 @@
+headers file:headers.h.rcode; content:all;
+
+function main() => {
+    clear()
+    random(num min >>1;;num max >>100)
+    num guessed >>0
+    num tries >>0
+    while num(guessed!=randomized);{
+        Write "Guess the number from $min$ - $max$: "
+        num guessed >>$readline
+        if num(guessed+>randomized);{
+            Write "$guessed$ was too big...$line_break$"
+        };
+        if num(guessed<-randomized);{
+            Write "$guessed$ was too low$line_break$"
+        };
+        ++tries;
+        if num(guessed==randomized);{
+            Write "You guess, $randomized$ was right, you got it in $tries$ tries!$line_break$"
+        };
+    };
+    suppress_errors()
+};
+
+main()
+exit()
