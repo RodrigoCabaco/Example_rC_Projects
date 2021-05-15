@@ -11,10 +11,12 @@ function main() => {
         if num(guessed+>randomized);{
             Write "$guessed$ was too big...$line_break$"
         };
+        else:
         if num(guessed<-randomized);{
             Write "$guessed$ was too low$line_break$"
         };
         ++tries;
+        else:
         if num(guessed==randomized);{
             Write "You guess, $randomized$ was right, you got it in $tries$ tries!$line_break$"
         };
