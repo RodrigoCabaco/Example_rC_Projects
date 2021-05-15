@@ -1,7 +1,6 @@
 headers file:headers.h.rcode; content:all;
 
 function main() => {
-    clear()
     random(num min >>1;;num max >>100)
     num guessed >>0
     num tries >>0
@@ -9,7 +8,7 @@ function main() => {
         Write "Guess the number from $min$ - $max$: "
         num guessed >>$readline
         if num(guessed+>randomized);{
-            Write "$guessed$ was too big...$line_break$"
+            Write "$guessed$ was too high...$line_break$"
         };
         else:
         if num(guessed<-randomized);{
@@ -23,6 +22,16 @@ function main() => {
     };
     suppress_errors()
 };
-
-main()
-exit()
+str play_again >>"y"
+while str(play_again=="y");{
+    clear()
+    main()
+    Write "Do you want to play again? [(y)/n] "
+    str play_again >>$readline
+    if str(play_again=="");{
+        str play_again >>"y"
+    };
+};
+if str(play_again=="n");{
+    exit()
+};
