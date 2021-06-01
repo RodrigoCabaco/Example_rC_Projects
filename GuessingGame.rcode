@@ -1,37 +1,31 @@
-headers file:headers.h.rcode; content:all;
+define " = ": " >>"
+define "int":"num"
+define "\n":"$line_break$"
+#START
 
-function main() => {
-    random(num min >>1;;num max >>100)
-    num guessed >>0
-    num tries >>0
-    while num(guessed!=randomized);{
-        Write "Guess the number from $min$ - $max$: "
-        num guessed >>$readline
-        if num(guessed+>randomized);{
-            Write "$guessed$ was too high...$line_break$"
-        };
-        else:
-        if num(guessed<-randomized);{
-            Write "$guessed$ was too low$line_break$"
-        };
-        ++tries;
-        else:
-        if num(guessed==randomized);{
-            Write "You guess, $randomized$ was right, you got it in $tries$ tries!$line_break$"
-        };
-    };
-    suppress_errors()
-};
-str play_again >>"y"
-while str(play_again=="y");{
-    clear()
-    main()
-    Write "Do you want to play again? [(y)/n] "
-    str play_again >>$readline
-    if str(play_again=="");{
-        str play_again >>"y"
-    };
-};
-if str(play_again=="n");{
-    exit()
-};
+function main():
+	int rand = rand:1,100
+	int guess = 0
+	int tries = 0
+	while int:guess!=rand:
+		++tries;
+		Write "Enter your guess: "
+		int guess = $readline
+		if num:guess>rand:
+			Write "Your guess ($guess$) was too high...\n"
+		else:
+			if num:guess<rand:
+				Write "Your guess ($guess$) was too low...\n"
+			else:
+				if num:guess==rand:
+					Write "You got it in $tries$ tries, the number was $guess$!\nDo you want to try again (Y/n): "
+					str option = $readline
+					toLower (option>>option)
+					if str:option!="n":
+						clear
+						main()
+					else:
+						exit()
+
+main()
+exit()
